@@ -9,7 +9,9 @@ tags: [Notes]
 
 [官方的例子](https://developer.apple.com/library/mac/qa/qa1405/_index.html)，留记
 
-```c
+<!-- more --> 
+
+```objc
 #import <Cocoa/Cocoa.h>
 
 @interface NSMutableArray (variadicMethodExample)

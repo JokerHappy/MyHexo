@@ -11,6 +11,8 @@ tags: [Runtime]
 
 当程序执行`[object doSomething]`时，并不是直接找到方法调用，而是会将一条消息`（message）`会发送给对象，对象根据消息决定该作出怎样的反应。
 
+<!-- more --> 
+
 `Objective-C` 是一个动态语言，这意味着它不仅需要一个编译器，也需要一个运行时系统来动态得创建类和对象、进行消息传递和转发。理解` Objective-C `的` Runtime `机制可以帮我们更好的了解这个语言，适当的时候还能对语言进行扩展，从系统层面解决项目中的一些设计或技术问题。
 
 `Objective-C`中一切都被设计成了对象，我们都知道一个类被初始化成一个实例，这个实例是一个对象。实际上一个类本质上也是一个对象，在`Runtime`中用结构体表示。
@@ -47,7 +49,7 @@ tags: [Runtime]
 
 > 获取成员变量列表
 
-```c
+```objc
         Ivar *ivarList = class_copyIvarList([self class], &count);
 
         for (unsigned int i; i<count; i++) {
@@ -95,7 +97,7 @@ tags: [Runtime]
 
 > 获取属性列表
 
-```c
+```objc
 	objc_property_t *propertyList = class_copyPropertyList([self class], &count);
 
 	for (unsigned int i=0; i<count; i++) {

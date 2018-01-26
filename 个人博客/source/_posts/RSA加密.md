@@ -9,6 +9,8 @@ tags: [RSA]
 
 * RSA算法：1977年由`Ron Rivest`、`Adi Shamirh`和`LenAdleman`发明的，RSA就是取自他们三个人的名字。算法基于一个数论：将两个大素数相乘非常容易，但要对这个乘积的结果进行因式分解却非常困难，因此可以把乘积公开作为公钥。该算法能够抵抗目前已知的所有密码攻击。RSA算法是一种非对称算法，算法需要一对密钥，使用其中一个加密，需要使用另外一个才能解密。我们在进行RSA加密通讯时，就把公钥放在客户端，私钥留在服务器。
 
+<!-- more --> 
+
 [RSA算法原理（一）](http://www.ruanyifeng.com/blog/2013/06/rsa_algorithm_part_one.html)<br/>
 [RSA算法原理（二）](http://www.ruanyifeng.com/blog/2013/07/rsa_algorithm_part_two.html)
 

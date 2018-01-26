@@ -12,7 +12,7 @@ tags: [Auto Layout]
 可视化格式由一个描述视图布局的文本字符串组成。你可以根据视图在界面中出现的顺序列出他们，文本中可以指定间隔、不等量及优先级，可以使布局形象化地表现为一个简单的文本。
 如下所示
 
-```c
+```objc
 [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-[view1](==200)-(>=20@750)-[view2]" options:NSLayoutFormatAlignAllLeft metrics:nil views:NSDictionaryOfVariableBindings(view1,view2)]];
 ```
 

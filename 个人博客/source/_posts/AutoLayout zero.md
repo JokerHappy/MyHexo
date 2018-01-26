@@ -7,7 +7,8 @@ tags: [Auto Layout]
 
 `Auto Layout`  重新构思了开发者创建界面的方式。它创建了一个灵活、强大的系统，来描述试图和他们的内容是如何相互关联的，他们和他们占据的窗口和父试图是如何关联的。
 
-<!-- more-->
+<!-- more --> 
+
 #### Auto Layout Process 自动布局过程
 
 `Auto Layout`在`view`显示之前，主要有三个步骤`updating constraints -> layout -> display`。每一个步骤都依赖于上一个。`display`依赖`layout`，而`layout`依赖`updating constraints`。 

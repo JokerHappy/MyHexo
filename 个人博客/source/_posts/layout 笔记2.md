@@ -43,7 +43,7 @@ tags: [Auto Layout]
 - 内容吸附优先级默认值为**250**
 - 压缩阻力优先级默认值为**750**
 
-```c 
+```objc
 -(UILayoutPriority)contentHuggingPriorityForAxis:(UILayoutConstraintAxis)axis NS_AVAILABLE_IOS(6_0);
 
 -(void)setContentHuggingPriority:(UILayoutPriority)priority forAxis:(UILayoutConstraintAxis)axis NS_AVAILABLE_IOS(6_0);
@@ -78,7 +78,7 @@ typedef NS_ENUM(NSInteger, UILayoutConstraintAxis) {
 
 利用`NSLayoutConstraint`类方法创建实例
 
-```c 
+```objc
 +(instancetype)constraintWithItem:(id)view1 attribute:(NSLayoutAttribute)attr1 relatedBy:(NSLayoutRelation)relation toItem:(nullable id)view2 attribute:(NSLayoutAttribute)attr2 multiplier:(CGFloat)multiplier constant:(CGFloat)c;
 ```
 

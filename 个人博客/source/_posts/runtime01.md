@@ -17,6 +17,8 @@ tags: [Runtime]
 
 5. 如果没有重写拦截调用的方法，程序报错。
 
+<!-- more --> 
+
 ##### 拦截调用
 
 在方法调用中说到了，如果没有找到方法就会转向拦截调用。
@@ -55,7 +57,7 @@ tags: [Runtime]
 
 然后，在`target`对象内部重写拦截调用的方法，动态添加方法。
 
-```c
+```objc
 	void runAddMethod(id self, SEL _cmd, NSString *string){
 
 	    NSLog(@"add C IMP ", string);
@@ -88,7 +90,7 @@ tags: [Runtime]
 
 话不多说，这是参考Mattt大神在NSHipster上的文章自己写的代码。
 
-```c
+```objc
 #import "UIViewController+swizzling.h"
 #import @implementation UIViewController (swizzling)
 //load方法会在类第一次加载的时候被调用

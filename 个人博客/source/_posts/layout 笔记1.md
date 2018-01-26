@@ -10,7 +10,9 @@ tags: [Auto Layout]
 2012年，Auto Layout 作为`iOS 6`版本的一部分，首次露面。 Auto Layout 的前身是`Cassowary` 约束解析包。
 
 > `Cassowary`是一种递增式约束解析工具包，它能有效的解析线性等式系统和线性不等式系统。约束可能是需求，也可能是偏好。该工具包能够快速的重新解析系统，并且支持UI应用程序。
+
 <!--More-->
+
 #### 使用**Auto Layout** 的好处
 
 + 建立几何关系
@@ -41,7 +43,7 @@ tags: [Auto Layout]
 
 在此只是简单说一下测试约束正确的几个方法及属性，在以后的学习笔记中会详细说明约束的方法。
 
-```c
+```objc
 -(BOOL)hasAmbiguousLayout NS_AVAILABLE_IOS(6_0); //用来测试视图的约束是否充分
 
 -(void)exerciseAmbiguityInLayout NS_AVAILABLE_IOS(6_0); //这个方法会随机改变视图的layout到另外一个有效的layout。这样我们就可以很清楚的看到哪一个layout导致了整体的布局约束出现了错误，或者我们应该增加更多的布局约束。

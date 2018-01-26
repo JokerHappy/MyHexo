@@ -7,7 +7,9 @@ tags: [Notes]
 
 下面代码输出什么？
 
-```c
+<!-- more --> 
+
+```objc
 @implementation Son : Father
 
 -(id)init
@@ -35,7 +37,7 @@ tags: [Notes]
 
  这种机制到底底层是如何实现的？其实当调用类方法的时候，编译器会将方法调用转成一个` C `函数方法调用，`Apple` 的 `objcRuntimeRef` 上说：
 
-```
+```objc
     Sending Messages
 
     When it encounters a method invocation, the compiler might generate a call to any of several functions to perform the actual message dispatch, depending on the receiver, the return value, and the arguments. You can use these functions to dynamically invoke methods from your own plain C code, or to use argument forms not permitted by NSObject’s perform… methods. These functions are declared in /usr/include/objc/objc-runtime.h.
@@ -48,7 +50,7 @@ tags: [Notes]
 
 可以看到会转成调用上面 4 个方法中的一个，由于 `_stret` 系列的和没有` _stret` 的那两个类似，先只关注` objc_msgSend` 和 `objc_msgSendSuper` 两个方法。当使用 `[self class]` 调用时，会使用 `objc_msgSend` 的函数，先看下 `objc_msgSend` 的函数定义：
 
-```
+```objc
 id objc_msgSend(id theReceiver, SEL theSelector, ...)
 
     //第一个参数是消息接收者，第二个参数是调用的具体类方法的 selector，后面是 selector 方法的可变参数。我们先不管这个可变参数，以 [self class] 为例，编译器会替换成调用 objc_msgSend 的函数调用，其中 theReceiver 是 self，theSelector 是 @selector(class)，这个 selector 是从当前 self 的 class 的方法列表开始找的方法，当找到后把对应的 selector 传递过去。
@@ -56,7 +58,7 @@ id objc_msgSend(id theReceiver, SEL theSelector, ...)
 
 而当使用 `[super class]` 调用时，会使用 `objc_msgSendSuper` 函数，看下 `objc_msgSendSuper` 的函数定义：
 
-```
+```objc
 id objc_msgSendSuper(struct objc_super *super, SEL op, ...)
 
     //第一个参数是个objc_super的结构体，第二个参数还是类似上面的类方法的selector，先看下objc_super这个结构体是什么东西：

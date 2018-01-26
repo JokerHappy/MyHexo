@@ -11,7 +11,10 @@ tags: [JavaScriptCore]
 
 在`iOS7`以前，在`OC`中调用`JavaScript`的方式只有一种，就是通过`UIWebView`对象的`stringByEvaluatingJavaScriptFromString:`方法，可以实现的交互很少，还需要JS提供相应的方法，实现功能，常用代码如下：
 
-```
+<!-- more --> 
+
+
+```objc
 NSString *title =[webView stringByEvaluatingJavaScriptFromString:@"document.title"];  //得到网页标题
 ```
 
@@ -29,7 +32,7 @@ NSString *title =[webView stringByEvaluatingJavaScriptFromString:@"document.titl
 
 然后在`webview`的代理函数中监听，如果是事先定义好的虚假`URL`，就进行对应的处理
 
-```c
+```objc
 -(BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType {
     NSURL *url = request.URL;
     if ([[url scheme] isEqualToString:@"tool"] && [[url host] isEqualToString:@"goToHomePage"]) {
@@ -84,7 +87,7 @@ NSString *title =[webView stringByEvaluatingJavaScriptFromString:@"document.titl
 
 实例代码，`OC`调用`JS` 实现 两个数字相加
 
-```c
+```objc
 // 初始化对象
 JSContext *context = [[JSContext alloc]init];
 // JS 脚本
@@ -122,7 +125,7 @@ JS调用OC有两个方法：`Block`和`JSExport`。
 
 <s>稍微复杂的运算</s>给出一个数字，从1加到当前数字，将此函数在OC中实现，在JS中调用，代码如下：
 
-```c
+```objc
 // 初始化对象
 JSContext *context = [[JSContext alloc]init];
 // JS 脚本
@@ -177,7 +180,7 @@ function addPerson(p) {
 
 可以在`Objective-C`中把`Person`对象传递给`addPerson`函数
 
-```c
+```objc
 Person *aPerson = [[Person alloc] init];
 aPerson.name = @"Jone";
 aPerson.age = @25;
@@ -189,7 +192,7 @@ JSValue *function = context[@"addPerson"];
 
 ##### 异常处理
 
-```c
+```objc
 context.exceptionHandler = ^(JSContext *context, JSValue *exception) {
        NSLog(@"Error: %@", exception);
 };

@@ -8,7 +8,7 @@ tags: [Hexo]
 
 [Hexo](https://hexo.io/) 是一款基于 `Node.js` 的静态博客框架。`Hexo` 生成的静态页面可以部署在 `Github` 或 `Coding` 上，并且能够免费绑定自己的域名，可以用来很方便地搭建个人博客。
 
-
+<!-- more --> 
 
 ## Github
 

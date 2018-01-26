@@ -4,10 +4,10 @@
 
 # Site
 title: 知行合一
-subtitle: 无谓的协助者
-description:
-author: xxx
-language: zh-CN
+subtitle: 无畏的协助者
+description: 无畏的协助者
+author: 温小二
+language: zh-Hans
 timezone:
 
 # URL
@@ -63,14 +63,15 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: jacman
+theme: next
 
 stylus:
   compress: true
 
 
 social:
-  github: JokerHappy
+  GitHub: https://github.com/JokerHappy || github
+  E-Mail: mailto:xuxixiang1988@gmail.com || envelope
 
 # Duoshuo
 # duoshuo_shortname: jokerHappy

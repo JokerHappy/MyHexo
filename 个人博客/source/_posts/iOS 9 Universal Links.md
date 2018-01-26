@@ -9,6 +9,8 @@ tags: [Notes]
 
 通过唯一的网址, 不需要特别的`schema`就可以链接一个特定的视图到`APP` 里面 。比如：在知乎中使用了通用链接, 那么用户在`Safari`、`UIWebView`或者 `WKWebView`点击一个链接, `iOS`设备上的知乎`app`会在知乎里面自动打开这个页面, 如果没有安装则在`Safrai`中打开响应链接。
 
+<!-- more --> 
+
 ##### Step 1
 
 创建一个`json` 格式的`apple-app-site-associatio` 文件<br/>
@@ -56,7 +58,7 @@ tags: [Notes]
 
 在 `AppDelegate` 里支持通用链接
 
-```c
+```objc
 -(BOOL)application:(UIApplication *)application continueUserActivity:(NSUserActivity *)userActivity restorationHandler:(void (^)(NSArray *restorableObjects))restorationHandler{
 
  	if ([[userActivity activityType] isEqualToString:NSUserActivityTypeBrowsingWeb]) 

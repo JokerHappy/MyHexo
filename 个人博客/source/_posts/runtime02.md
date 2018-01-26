@@ -9,21 +9,23 @@ tags: [Runtime]
 
 [Associated Objects](http://nshipster.cn/associated-objects/)(关联对象)与它相关在`<objc/rumtime.h>`中有3个C函数，他们可以让对象在运行时关联任何值：
 
+<!-- more --> 
+
 (1)用给定的`key`和`policy`来为指定对象`(object)`设置关联对象值`(value)`
 
-```c
+```objc
 	void objc_setAssociatedObject(id object, const void *key, id value, objc_AssociationPolicy policy)
 ```
 
 (2)根据给定的`key`从指定对象`(object)`中获取相对应的关联对象值
 
-```c
+```objc
 	id objc_getAssociatedObject(id object, const void *key)
 ```
 
 (3)移除指定对象的全部关联对象
 
-```c
+```objc
 	void objc_removeAssociatedObjects(id object)
 ```
 
@@ -42,7 +44,7 @@ tags: [Runtime]
 
 `objc_AssociationPolicy`是一个枚举类型的数据结构定义了`OBJC_ASSOCIATION_ASSIGN`、`OBJC_ASSOCIATION_RETAIN_NONATOMIC`、`OBJC_ASSOCIATION_COPY_NONATOMIC`、`OBJC_ASSOCIATION_RETAIN`和`OBJC_ASSOCIATION_COPY`这样五个关联对象特性，每个特性的描述如下：
 
-```c
+```objc
     OBJC_ASSOCIATION_ASSIGN,给关联对象指定弱引用,相当于@property(assign)或@property(unsafe_unretained)
 
     OBJC_ASSOCIATION_RETAIN_NONATOMIC,给关联对象指定非原子的强引用,相当于@property(nonatomic,strong)或@property(nonatomic,retain)
@@ -56,7 +58,7 @@ tags: [Runtime]
 
 ##### 示例代码
 
-```c
+```objc
 - (void)viewDidLoad {
 - 
     [super viewDidLoad];
