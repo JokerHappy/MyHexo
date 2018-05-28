@@ -21,7 +21,7 @@ tags: [Auto Layout]
 + `display`，此步时把`view`渲染到屏幕上，它与你是否使用`Auto layout`无关，其操作是从上向下(from super view to subview)，通过调用`setNeedsDisplay`触发，因为每一步都依赖前一步，因此一个`display`可能会触发`layout`，当有任何`layout`没有被处理的时候，同理，`layout`可能会触发`updating constraints`，当`constraint system`更新改变的时候。
 
 
-![](http://7xt3bw.com1.z0.glb.clouddn.com/4.png)
+![](http://7xt3bw.com1.z0.glb.clouddn.com/4.png-water)
 
 #### iOS 提供的Layout 的方法
 

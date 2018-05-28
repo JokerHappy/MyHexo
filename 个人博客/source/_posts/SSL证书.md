@@ -62,7 +62,7 @@ SSL证书的厂商非常多，也没有绝对的好与坏之分。不过我们�
 
 这是今年2月份，w3techs.com发布的SSL证书市场份额报告中的截图。
 
-<image height="500px" src="http://7xt3bw.com1.z0.glb.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-02-05%20%E4%B8%8B%E5%8D%884.52.17.png"></image>
+<image height="500px" src="http://7xt3bw.com1.z0.glb.clouddn.com/ssl.png-water"></image>
 
 [Godaddy](https://sg.godaddy.com/zh?isc=gennbacn07&currencytype=CNY&utm_source=baidu&utm_medium=cpc&utm_campaign=zh-cn_corp_sem_base_brand_gd&utm_content=GD%20Core%20-%20Phrase&utm_term=godaddy&mkwid=1edNUgIP8_pcrid_18782177220_pdv_c_)的OV证书从购买到部署到使用到安全性，都是比较简便且可信赖的。
 

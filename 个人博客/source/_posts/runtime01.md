@@ -40,7 +40,7 @@ tags: [Runtime]
 * 第四个方法是将你调用的不存在的方法打包成`NSInvocation`传给你。做完你自己的处理后，调用`invokeWithTarget:`方法让某个`target`触发这个方法。
 
 具体流程如下：
-![](http://7xt3bw.com1.z0.glb.clouddn.com/runtimemethod.png)
+![](http://7xt3bw.com1.z0.glb.clouddn.com/runtimemethod.png-water)
 
 具体事例可参考[理解 Objective-C Runtime](http://justinyan.me/post/1624)
 
